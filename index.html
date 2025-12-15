@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>Pedro Santiago</title>
+    <link rel="icon" sizes="32x32" href="media/favicon-32.png">
+    <link rel="icon" sizes="192x192" href="media/favicon-192.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="preloader">
+        <img src="media/logo_base.png" alt="Carregando...">
+        <img src="media/logo_cheio.png" alt="Carregado" class="img-cheia">
+    </div>
+    <aside class="side-menu">
+        <button class="menu-item" data-target="home" type="button">
+            <span class="icon"><img src="media/home.png" alt="home"></span>
+            <span class="label">Home</span>
+        </button>
+        <button class="menu-item" data-target="about" type="button">
+            <span class="icon"><img src="media/about.png" alt="sobre"></span>
+            <span class="label">Sobre</span>
+        </button>
+        <button class="menu-item" data-target="works" type="button">
+            <span class="icon"><img src="media/works.png" alt="trabalhos"></span>
+            <span class="label">Trabalhos</span>
+        </button>
+        <button class="menu-item" data-target="mail" type="button">
+            <span class="icon"><img src="media/mail.png" alt="email"></span>
+            <span class="label">Contato</span>
+        </button>
+    </aside>
+    <main>
+        <section class="panel" id="home">
+            <h1>PEDRO SANTIAGO</h1>
+            <p>Aspirante a Desenvolvedor na Alpha Edtech</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/pedroasantiago/" target="_blank" rel="noopener noreferrer">
+                    <img src="media/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/psantiago20" target="_blank" rel="noopener noreferrer">
+                    <img src="media/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.alphaedtech.org.br/" target="_blank" rel="noopener noreferrer">
+                    <img src="media/alpha.png" alt="Alpha Edtech" class="icon-alpha">
+                </a>
+            </div>
+            <div class="skills-icons">
+                <img src="media/html-5.png" alt="HTML5">
+                <img src="media/css-3.png" alt="CSS3">
+                <img src="media/script-java.png" alt="Javascript">
+            </div>
+            <footer class="panel-footer">
+                <p>
+                    © 2025 Pedro Santiago — Projeto desenvolvido para fins de estudo.
+                </p>
+            </footer>
+        </section>
+        <section class="panel" id="about">
+            <div class="about-panel-content">
+                <h1>SOBRE</h1>
+                <p>
+                    Sou formado em Administração e em Comércio Exterior, com experiência em organização,
+                    processos e visão estratégica.
+                </p>
+
+                <p>
+                    Atualmente sou <strong>aspirante a desenvolvedor no Instituto Alpha Edtech</strong>,
+                    onde venho aprofundando meus estudos em desenvolvimento web e lógica de programação.
+                </p>
+
+                <p>
+                    Fui um dos finalistas do <strong>/Código[S] – Stone 2022</strong>, na trilha
+                    <strong>Backend com Python</strong>, experiência que reforçou meu foco em desenvolvimento
+                    de software e boas práticas.
+                </p>
+
+                <p>
+                    Busco evoluir constantemente, unindo minha formação em gestão à tecnologia,
+                    com foco em aprendizado contínuo e projetos práticos.
+                </p>
+            </div>
+            <div class="about-panel-image">
+                <img
+                    src="media/foto_perfil-400.webp"
+                    srcset="
+                        media/foto_perfil-400.webp 400w,
+                        media/foto_perfil-800.webp 800w,
+                        media/foto_perfil-1600.webp 1600w
+                    "
+                    sizes="(max-width: 768px) 140px, 140px"
+                    class="perfil"
+                    alt="Foto de Perfil"
+                >
+            </div>
+
+        </section>
+
+        <section class="panel" id="works">
+
+            <div class="works-panel-content">
+                <h1>TRABALHOS</h1>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="works-panel-sites-container">
+                    <div class="works-panel-sites">
+                        <a href="templates\Exerc02\index.html">
+                            <img
+                                src="media/trabalho1-600.webp"
+                                srcset="
+                                    media/trabalho1-600.webp 600w,
+                                    media/ftrabalho1-1000.webp 1000w,
+                                    media/trabalho1-1600.webp 1600w
+                                "
+                                sizes="(max-width: 768px) 140px, 140px"
+                                class="trabalhos"
+                                alt="Trabalho 1"
+                            >
+                        </a>
+                    </div>
+
+                    <div class="works-panel-sites">
+                        <a href="templates\Exerc05\index.html">
+                            <img
+                                src="media/trabalho2-600.webp"
+                                srcset="
+                                    media/trabalho2-600.webp 600w,
+                                    media/ftrabalho2-1000.webp 1000w,
+                                    media/trabalho2-1600.webp 1600w
+                                "
+                                sizes="(max-width: 768px) 140px, 140px"
+                                class="trabalhos"
+                                alt="Trabalho 2"
+                            >
+                        </a>
+                    </div>
+
+                    <div class="works-panel-sites">
+                        <a href="#">
+                            <img
+                                src="media/trabalho3-600.webp"
+                                srcset="
+                                    media/trabalho3-600.webp 600w,
+                                    media/ftrabalho3-1000.webp 1000w,
+                                    media/trabalho3-1600.webp 1600w
+                                "
+                                sizes="(max-width: 768px) 140px, 140px"
+                                class="trabalhos"
+                                alt="Trabalho 3"
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-indicators"></div>
+        </section>
+
+        <section class="panel" id="mail">
+            <h1>CONTATO</h1>
+            <p>Entre em contato comigo</p>
+            <p class="aviso">*Apenas simulação</p>
+            <div class="mail">
+                <form id="contact-form">
+                    <label>
+                        Nome
+                        <input type="text" name="name" required minlength="3">
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" name="email" required>
+                    </label>
+
+                    <label>
+                        Mensagem
+                        <textarea name="message" required minlength="10"></textarea>
+                    </label>
+
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <p id="form-status" aria-live="polite"></p>
+
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
