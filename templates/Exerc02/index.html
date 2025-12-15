@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - Exercício 02 - Coffee Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="hero">
+
+        <!-- COLUNA ESQUERDA -->
+        <div class="left">
+            <h1>Coffee Selection</h1>
+            <p>Escolha seu café favorito. Aromas intensos e sabores únicos.</p>
+            <a class="btn" href="#">Comprar agora</a>
+        </div>
+
+        <!-- COLUNA DIREITA -->
+        <div class="right">
+
+            <!-- INPUTS (escondidos, mas usados para a lógica CSS) -->
+            <input type="radio" name="coffee" id="coffee1" checked>
+            <input type="radio" name="coffee" id="coffee2">
+            <input type="radio" name="coffee" id="coffee3">
+            <input type="radio" name="coffee" id="coffee4">
+
+            <!-- IMAGEM PRINCIPAL -->
+            <div class="image-display">
+                <img src="media/coffee1.png" class="big-img" id="img1" alt="Flat White">
+                <img src="media/coffee2.png" class="big-img" id="img2" alt="Latte">
+                <img src="media/coffee3.png" class="big-img" id="img3" alt="Cappuccino">
+                <img src="media/coffee4.png" class="big-img" id="img4" alt="Mocaccino">
+            </div>
+
+            <!-- MINIATURAS -->
+            <div class="thumbs">
+
+                <label for="coffee1" class="thumb">
+                    <img src="media/coffee1.png" alt="Flat White">
+                    <span>Flat White</span>
+                </label>
+
+                <label for="coffee2" class="thumb">
+                    <img src="media/coffee2.png" alt="Latte">
+                    <span>Latte</span>
+                </label>
+
+                <label for="coffee3" class="thumb">
+                    <img src="media/coffee3.png" alt="Cappuccino">
+                    <span>Cappuccino</span>
+                </label>
+
+                <label for="coffee4" class="thumb">
+                    <img src="media/coffee4.png" alt="Mocaccino">
+                    <span>Mocaccino</span>
+                </label>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
