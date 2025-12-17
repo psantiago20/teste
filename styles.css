@@ -94,19 +94,15 @@ main::-webkit-scrollbar {
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-
-    background-color: rgba(0, 0, 0, 0.3);
-    background-image: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent);
-    border-radius: 8px; /* é necesário? parece que apaguei e não mudou nada */
 
     box-shadow: 
         0 20px 50px rgba(0,0,0,0.6),
         0 1px 3px rgba(0,0,0,0.8);
 
     position: relative;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 
 .panel h1 {
@@ -228,16 +224,26 @@ main::-webkit-scrollbar {
     filter: none !important;
 }
 
-#about {
+  #about {
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
-}
+    /* Para telas grandes, use flexbox ou grid para controlar o alinhamento */
+    display: flex;
+    flex-direction: column; /* Manter a ordem original (Título > Texto > Imagem) */
+    align-items: center; /* Centralizar horizontalmente */
+    text-align: center; /* Centralizar títulos e parágrafos */
+  }
 
+/* Ajuste o conteúdo para que ocupe menos largura e fique centralizado */
 .about-panel-content {
-    text-align: justify;
+    text-align: justify; /* Mantenha o texto justificado, se preferir */
+    /* Adicione uma largura máxima para não esticar demais em telas muito grandes */
+    max-width: 700px;
+    margin-top: 20px; /* Adiciona espaço acima do texto */
 }
 
-
+/* Corrija a posição da imagem do perfil para telas grandes */
 .about-panel-image {
     position: absolute;
     top: 20px;
@@ -246,28 +252,39 @@ main::-webkit-scrollbar {
     height: clamp(80px, 15vw, 140px);
 }
 
-.about-panel-image .perfil {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+ .about-panel-image .perfil {
+
+width: 100%;
+
+height: 100%;
+
+object-fit: cover;
+
+border-radius: 50%;
+
+}
+
+/* Adicione um padding na parte superior do about-panel-content para não competir com a imagem */
+#about .about-panel-content {
+    /* Adicione espaço interno superior para que o texto não suba demais */
+    padding-top: 80px;
+    text-align: justify;
 }
 
 #works {
     justify-content: flex-start;
     align-items: center;
-    padding: 0;
+    padding: 40px 20px;
     overflow: hidden;
 }
 
 .works-panel-content {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; /* Garante que está no fluxo normal */
     z-index: var(--z-overlay);
     text-align: center;
     max-width: 90%;
+    margin-bottom: 40px; /* Adiciona espaço abaixo do título e acima dos trabalhos */
+    margin-top: 0; /* Alinha com o topo do painel */
 }
 
 .works-panel-sites-container {
@@ -275,9 +292,9 @@ main::-webkit-scrollbar {
     width: 100%;
     max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 280px);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Use minmax para melhor ajuste */
     gap: 20px;
-    justify-content: left;
+    place-content: center;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -562,4 +579,67 @@ main::-webkit-scrollbar {
   .carousel-wrapper {
     display: contents;
   }
+}
+
+@media (min-width: 2560px) {
+html, body {
+  font-size: 1.5em;
+}
+
+.panel {
+  max-width: 1400px;
+  margin: 150px auto;
+  padding: 60px 40px;
+}
+
+.panel h1 {
+  font-size: 8rem;
+  letter-spacing: 10px;
+}
+
+.side-menu {
+  left: 40px;
+  gap: 30px;
+}
+
+.menu-item {
+  width: 180px;
+}
+
+.menu-item img {
+  width: 60px;
+  height: 60px;
+}
+
+.menu-item:hover .label, 
+.menu-item.active .label {
+  max-width: 120px;
+  font-size: 20px;
+}
+
+.social-media a img,
+.skills-icons img {
+  width: 48px;
+  height: 48px;
+}
+
+.about-panel-image {
+  width: 240px;
+  height: 240px;
+}
+
+.mail form {
+  max-width: 600px;
+}
+
+.works-panel-sites-container {
+  grid-template-columns: repeat(auto-fit,
+  minmax(400px, 1fr));
+  gap: 40px;
+  padding: 60px; }
+
+.panel-footer {
+  font-size: 1rem;
+  bottom: 30px; }
+  
 }
