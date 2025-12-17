@@ -102,7 +102,6 @@ main::-webkit-scrollbar {
         0 1px 3px rgba(0,0,0,0.8);
 
     position: relative;
-    padding-bottom: 40px;
 }
 
 .panel h1 {
@@ -228,10 +227,6 @@ main::-webkit-scrollbar {
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
-    /* Para telas grandes, use flexbox ou grid para controlar o alinhamento */
-    display: flex;
-    flex-direction: column; /* Manter a ordem original (Título > Texto > Imagem) */
-    align-items: center; /* Centralizar horizontalmente */
     text-align: center; /* Centralizar títulos e parágrafos */
   }
 
@@ -333,7 +328,6 @@ border-radius: 50%;
 
 .mail form{
     background-color: rgba(0, 0, 0, 0.2);
-    box-sizing: content-box;
     box-shadow: #008080 0px 0px 10px 0px;
     width: 100%;
     max-width: 400px;
@@ -343,16 +337,6 @@ border-radius: 50%;
     padding: 12px;
     border-radius: 10px;
 }
-
-  .mail h1 {
-    font-size: 1.1rem;
-    margin-bottom: 6px;
-  }
-
-  .mail p {
-    font-size: 0.6rem;
-    margin-top: 4px;
-  }
 
 .mail input, .mail textarea {
     width: 100%;
@@ -394,12 +378,6 @@ border-radius: 50%;
     color: #ddd;
 }
 
-#mail input,
-#mail textarea {
-    padding: 8px;
-    font-size: 0.9rem;
-}
-
 .mail textarea {
     resize: vertical;
     min-height: 60px;
@@ -410,11 +388,7 @@ border-radius: 50%;
     outline: 2px solid #008080;
 }
 
-#mail .panel-footer {
-    position: static;
-    margin-top: 15px;
-}
-
+/* ===================== RODAPÉ DOS PAINÉIS ===================== */
 .panel-footer {
     margin-top: auto;
     padding-top: 15px;
@@ -471,7 +445,6 @@ border-radius: 50%;
 
   /* PANELS */
   .panel {
-    min-height: calc(100svh - 64px);
     width: 95%;
     min-height: 80vh;
     margin: calc(64px + 10vh) auto 10vh;
@@ -523,7 +496,7 @@ border-radius: 50%;
     margin-bottom: 20px;     /* espaço antes do carrossel */
   }
 
-  .works-panel-content h1 {
+  .works-panel-content h2 {
     font-size: 1.3rem;
     letter-spacing: 2px;
   }
@@ -612,7 +585,7 @@ html, body {
   padding: 60px 40px;
 }
 
-.panel h1 {
+.panel h2 {
   font-size: 8rem;
   letter-spacing: 10px;
 }

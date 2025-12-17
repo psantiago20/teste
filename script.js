@@ -1,6 +1,4 @@
 const items = document.querySelectorAll(".menu-item"); /* Seleciona todos os itens do menu */
-const panels = document.querySelectorAll(".panel"); /* Seleciona todos os painéis */
-const main = document.querySelector("main"); /* Seleciona o elemento main */ /* porque não SectorAll? */
 const slides = document.querySelectorAll(".works-panel-sites");
 const container = document.querySelector(".works-panel-sites-container");
 const indicators = document.querySelector("#works .carousel-indicators");
@@ -59,11 +57,15 @@ if (window.innerWidth <= 768 && slides.length > 1) {
   });
 }
 
-form.addEventListener("submit", function (event) {
-    event.preventDefault(); // impede envio real
+if (form){
+  
+  form.addEventListener("submit", function (event) {
+      event.preventDefault(); // impede envio real
 
-    status.textContent = "Mensagem enviada com sucesso! (APENAS SIMULAÇÃO)";
-    status.style.color = "lightgreen";
+      status.textContent = "Mensagem enviada com sucesso! (APENAS SIMULAÇÃO)";
+      status.style.color = "lightgreen";
 
-    form.reset();
-});
+      form.reset();
+  })
+
+};
